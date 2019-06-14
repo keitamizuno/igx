@@ -1,18 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppComponent } from "./app.component";
+import { IgxHierarchicalGridModule } from "igniteui-angular";
+import { HGridColumnResizingSampleComponent } from "./hierarchical-grid/hierarchical-grid-column-resizing/hierarchical-grid-resizing.component";
+import { 
+	IgxAvatarModule,
+	IgxIconModule,
+	IgxListModule,
+	IgxRippleModule,
+	IgxSnackbarModule
+ } from "igniteui-angular";
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
-    AppComponent
+    AppComponent,
+    HGridColumnResizingSampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    FormsModule,
+    IgxHierarchicalGridModule,
+    IgxAvatarModule,
+		IgxIconModule,
+		IgxListModule,
+		IgxRippleModule,
+		IgxSnackbarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: []
 })
 export class AppModule { }

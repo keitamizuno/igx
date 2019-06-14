@@ -1,0 +1,109 @@
+{{selectedItems}}
+<igx-hierarchical-grid class="hierarchicalGrid" [data]="localdata" (onColumnResized)="onResize($event)"
+    [autoGenerate]="false" [height]="'100%'" [width]="'100%'" [rowHeight]="'65px'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
+    <!-- <igx-column header="check" width="7%">
+            <ng-template igxCell let-cell="cell" let-val>
+             
+                <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+                    <igx-icon color="#ff5252">delete</igx-icon>
+                </span>
+            </ng-template>
+        
+        </igx-column> -->
+    <igx-column field="Time" [resizable]="true" [sortable] = "true" [width]="'15%'"></igx-column>
+    <igx-column field="From" [resizable]="true" [sortable] = "true" [width]="'12%'"></igx-column>
+    <igx-column field="Subject" [resizable]="true" [sortable] = "true" [width]="'28%'" [minWidth]="'15%'">
+    </igx-column>
+    <igx-column field="Word" [resizable]="true" [sortable] = "true" [width]="'15%'"></igx-column>
+    <igx-column field="To" [resizable]="true" [sortable] = "true" [width]="'12%'"></igx-column>
+    <igx-column field="Attachment" [resizable]="true" [sortable] = "true" [width]="'12%'"></igx-column>
+
+
+    
+    
+
+    <!-- <igx-row-island [key]="'Albums'" [autoGenerate]="false">
+        <igx-column field="Album" [resizable]="true"></igx-column>
+        <igx-column field="Launch Date" [resizable]="true" [dataType]="'date'"></igx-column>
+        <igx-column field="Billboard Review" [resizable]="true"></igx-column>
+        <igx-column field="US Billboard 200" [resizable]="true"></igx-column>
+    <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+            <igx-column field="No." [resizable]="true"></igx-column>
+            <igx-column field="Title" [resizable]="true"></igx-column>
+            <igx-column field="Released" [resizable]="true"></igx-column>
+            <igx-column field="Genre" [resizable]="true"></igx-column>
+    </igx-row-island>
+    </igx-row-island> -->
+
+    <igx-row-island [key]="'Detail'" [autoGenerate]="false">
+            <igx-column field="Time" [resizable]="true"></igx-column>
+        <igx-column field="From" [resizable]="true"></igx-column>
+        
+        <igx-column field="Content" [resizable]="true" [width]="'60%'">
+                <ng-template igxCell let-cell="cell">
+                   
+                        <div [innerHTML]="cell.value"></div>
+                    
+                </ng-template>
+        </igx-column>
+        <igx-column field="Attachment" [resizable]="true" >
+            <ng-template igxCell let-cell="cell" >
+                <div class="cell__inner_2">
+                        <p *ngIf="cell.value" >
+                    <img [src]="cell.value" class="photo" />
+                </p>
+                </div>
+            </ng-template>
+        </igx-column>
+    </igx-row-island>
+
+
+</igx-hierarchical-grid>
+{{selectedItems}}
+<igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
+{{selectedItems}}
+
+<!-- 
+<div class="list-sample">
+    <igx-list>
+        <igx-list-item [isHeader]="true">Contacts</igx-list-item>
+
+        <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item-content" *ngFor="let item of localdata">
+            <div class="item-container">
+                <div class="contact">
+                    <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                    <div class="contact__info">
+                        <span class="name">{{item.text}}</span>
+                    </div>
+                </div>
+                <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+                    <igx-icon color="#ff5252">delete</igx-icon>
+                </span>
+            </div>
+
+        </igx-list-item>
+    </igx-list>
+</div> -->
+<!-- 
+<div class="list-sample">
+    <igx-list>
+        <igx-list-item [isHeader]="true">Contacts</igx-list-item>
+
+        <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item-content" *ngFor="let item of localdata">
+            <div class="item-container">
+                <div class="contact">
+                    <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                    <div class="contact__info">
+                        <span class="name">{{item.text}}</span>
+                    </div>
+                </div>
+                <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+                    <igx-icon color="#ff5252">delete</igx-icon>
+                </span>
+            </div>
+
+        </igx-list-item>
+
+        <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
+    </igx-list>
+</div> -->
