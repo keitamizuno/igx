@@ -10,7 +10,8 @@
         </div>
 
         <div class="progress-bar">
-            <igx-linear-bar type="warning" [textTop]="true" [text]="" [striped]="true" [max]="4">
+            <igx-linear-bar type="warning" [textTop]="true" [text]="checkItemsAndNumberOfAllItems" [striped]="true"
+                [max]="numberOfAllItems">
             </igx-linear-bar>
         </div>
 
@@ -89,5 +90,6 @@
         </igx-toast>
     </igx-tabs-group>
     <igx-tabs-group label="checked">This is Tab 2 content.</igx-tabs-group>
+
 
 </igx-tabs>

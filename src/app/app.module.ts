@@ -15,7 +15,8 @@ import {
   IgxButtonModule,
   IgxTabsModule,
   IgxChipsModule,
-  IgxProgressBarModule
+  IgxProgressBarModule,
+  IgxOverlayService
 } from "igniteui-angular";
 
 @NgModule({
@@ -40,7 +41,7 @@ import {
     IgxChipsModule,
     IgxProgressBarModule
   ],
-  providers: [],
+  providers: [IgxOverlayService],
   entryComponents: []
 })
 export class AppModule { }

@@ -1,6 +1,9 @@
-import { Component, OnInit, ViewChild, ViewChildren, QueryList } from "@angular/core";
-import { IgxColumnComponent, IgxHierarchicalGridComponent, IgxRowIslandComponent, IgxSnackbarComponent, IgxToastPosition, IgxChipsAreaComponent, IgxLinearProgressBarComponent, IgxTextAlign } from "igniteui-angular";
+import { Component, OnInit, ViewChild, ViewChildren, QueryList, Inject, OnDestroy } from "@angular/core";
+import { Subject } from "rxjs";
+import { filter, takeUntil } from "rxjs/operators";
+import { IgxColumnComponent, IgxHierarchicalGridComponent, IgxRowIslandComponent, IgxSnackbarComponent, IgxToastPosition, IgxChipsAreaComponent, IgxLinearProgressBarComponent, IgxTextAlign, IgxOverlayService } from "igniteui-angular";
 import { SINGERS } from "../data";
+import { CardSample1Component } from "../../layouts/card/card-sample-1/card-sample-1.component";
 
 @Component({
     selector: "hierarchical-grid-resizing",
@@ -16,7 +19,8 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public nWidth: string;
     public numberOfStampted = 0;
     public checkedItems = 0;
-    public numberOfAllItems = 0;
+    public numberOfAllItems = 20;
+    public checkItemsAndNumberOfAllItems = this.checkedItems + ' / ' + this.numberOfAllItems;
     public toastPosition: IgxToastPosition = IgxToastPosition.Middle;
 
     @ViewChild("hierarchicalGrid")
@@ -45,26 +49,26 @@ export class HGridColumnResizingSampleComponent implements OnInit {
 
     constructor() {
         this.localdata = SINGERS;
+
     }
 
     public ngOnInit() {
         this.positionCenter = IgxTextAlign.CENTER;
         this.positionEnd = IgxTextAlign.END;
-        // this.navItems = [{
-        //   avatar: "https://jp.infragistics.com/angular-demos/assets/images/avatar/2.jpg",
-        //   text: "Richard Mahoney"
-        // },
-        // {
-        //   avatar: "https://jp.infragistics.com/angular-demos/assets/images/avatar/4.jpg",
-        //   text: "Lisa Landers"
-        // },
-        // {
-        //   avatar: "https://jp.infragistics.com/angular-demos/assets/images/avatar/14.jpg",
-        //   text: "Marianne Taylor"
-        // }, {
-        //   avatar: "https://jp.infragistics.com/angular-demos/assets/images/avatar/17.jpg",
-        //   text: "Ward Riley"
-        // }];
+
+        // if (!this._overlayId) {
+        //     this._overlayId = this.overlayService.attach(CardSample1Component);
+        // }
+
+        // this.overlayService.show(this._overlayId);
+
+        //     // ローディング開始
+        //     this.spinner.attach(new ComponentPortal(MatSpinner));
+        //     setTimeout(() => {
+        //       // ローディング終了
+        //       this.spinner.detach();
+        //     }, 3000);
+
     }
 
     public onResize(event) {
@@ -86,7 +90,6 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     }
 
     public stamp(toast) {
-
         this.numberOfStampted = 0;
 
         console.log(JSON.stringify(this.hierarchicalGrid.selectedRows()));
@@ -98,10 +101,8 @@ export class HGridColumnResizingSampleComponent implements OnInit {
         });
 
         this.linearBars.map((bar) => bar.value += this.numberOfStampted);
-
-        this.checkedItems = + this.numberOfStampted;
-
-        //this.snackbar.show()
+        this.checkedItems = this.checkedItems + this.numberOfStampted;
+        this.checkItemsAndNumberOfAllItems = this.checkedItems + ' / ' + this.numberOfAllItems;
         toast.show()
 
     }
@@ -109,9 +110,6 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public handleRowSelectionChange(args) {
         this.selectedItems = this.hierarchicalGrid.selectedRows()
 
-
-        //args.newSelection = args.oldSelection; // overwrites the new selection, making it so that no new row(s) are entered in the selectionAPI
-        //args.checked = true; // overwrites the checkbox state
     }
     public handleRowSelection(event) {
         this.num = this.num + 1;
@@ -129,3 +127,34 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     }
 
 }
+// export class OverlaySampleMain1Component implements OnDestroy {
+//     private destroy$ = new Subject<boolean>();
+//     private _overlayId: string;
+
+//     constructor(
+//         @Inject(IgxOverlayService) public overlayService: IgxOverlayService
+//     ) {
+//         //  overlay service deletes the id when onClosed is called. We should clear our id
+//         //  also in same event
+//         this.overlayService
+//             .onClosed
+//             .pipe(
+//                 filter((x) => x.id === this._overlayId),
+//                 takeUntil(this.destroy$))
+//             .subscribe(() => delete this._overlayId);
+//     }
+
+//     public showOverlay() {
+//         if (!this._overlayId) {
+//             this._overlayId = this.overlayService.attach(CardSample1Component);
+//         }
+
+//         this.overlayService.show(this._overlayId);
+//     }
+
+//     public ngOnDestroy() {
+//         this.destroy$.next(true);
+//         this.destroy$.complete();
+//     }
+// }
+
