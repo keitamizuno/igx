@@ -1,0 +1,15 @@
+// Import the IgniteUI themes library first
+@import "~igniteui-angular/lib/core/styles/themes/index";
+
+$company-color: #366ed8; 
+$secondary-color: #f3a953; 
+
+$my-color-palette: igx-palette(
+  $primary: $company-color,
+  $secondary: $secondary-color
+);
+
+// IMPORTANT: Make sure you always include igx-core first!
+@include igx-core();
+// Pass the color palette we generated to the igx-theme mixin
+@include igx-theme($my-color-palette);

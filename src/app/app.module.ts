@@ -5,13 +5,18 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxHierarchicalGridModule } from "igniteui-angular";
 import { HGridColumnResizingSampleComponent } from "./hierarchical-grid/hierarchical-grid-column-resizing/hierarchical-grid-resizing.component";
-import { 
-	IgxAvatarModule,
-	IgxIconModule,
-	IgxListModule,
-	IgxRippleModule,
-	IgxSnackbarModule
- } from "igniteui-angular";
+import {
+  IgxAvatarModule,
+  IgxIconModule,
+  IgxListModule,
+  IgxRippleModule,
+  IgxSnackbarModule,
+  IgxToastModule,
+  IgxButtonModule,
+  IgxTabsModule,
+  IgxChipsModule,
+  IgxProgressBarModule
+} from "igniteui-angular";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -25,10 +30,15 @@ import {
     FormsModule,
     IgxHierarchicalGridModule,
     IgxAvatarModule,
-		IgxIconModule,
-		IgxListModule,
-		IgxRippleModule,
-		IgxSnackbarModule
+    IgxIconModule,
+    IgxListModule,
+    IgxRippleModule,
+    IgxSnackbarModule,
+    IgxToastModule,
+    IgxButtonModule,
+    IgxTabsModule,
+    IgxChipsModule,
+    IgxProgressBarModule
   ],
   providers: [],
   entryComponents: []

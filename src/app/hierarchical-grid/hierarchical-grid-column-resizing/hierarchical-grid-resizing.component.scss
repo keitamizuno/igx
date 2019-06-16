@@ -1,7 +1,41 @@
+// @import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
+// @include igx-input-group($my-input-group-theme);
+//@include igx-input-group($default-palette);
+//@include igx-theme($default-palette);
+
 .photo {
     vertical-align: middle;
-    max-height: 50px;
+    max-height: 40px;
 }
+
 .cell__inner_2 {
     margin: 1px
+}
+.tool-bar{
+    overflow: hidden;
+}
+.check-button{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 23px;
+    padding-right: 23px;
+    float: left;
+}
+
+.progress-bar{
+    width: 100%;
+    min-width: 50%;
+    padding-top: 5px;
+    float: right;
+
+    margin-left: -155px;
+    padding-left: 155px;
+    box-sizing: border-box;
+
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 2.0rem;
+    margin-top: .10rem;
+
+
 }

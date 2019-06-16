@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/igniteui-angular/styles/igniteui-angular.css"
+              "src/my-app-theme.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true

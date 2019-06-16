@@ -1,8 +1,8 @@
 /* tslint:disable */
 export const SINGERS = [
     {
-
-        "Time": "2019/10/10 10:10:11",
+        "Id": "1",
+        "Time": "2019/10/11 10:10:11",
         "From": "keita mizuno",
         "Subject": "testestestes<mark>tsetes</mark>",
         "To": "masashi iwata",
@@ -13,7 +13,7 @@ export const SINGERS = [
             "From": "keita mizuno",
             "Content": "Content Export service is still available via SFTP to access exports in your private pod. CEB will help it to protect your data more securely by decrypting exported content locally.",
             "Attachment": ""
-        }, 
+        },
         {
             "From": "masashi iwata",
             "Content": "<1>If KM is in SymphonyCloud, another each components (CEB, AgentAPI, DirectoryBridge, IntegrationBridge, Symproxy, MediaBridge) can be built on-prem?Please tell me Yes or No each components.っっっっっっっっっっっっっっっっっっっっっっっっっっ差ああああああああああああああああああ",
@@ -38,7 +38,288 @@ export const SINGERS = [
 
     },
     {
+        "Id": "2",
         "Time": "2019/10/10 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "3",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "4",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "5",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "6",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "7",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "8",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "9",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "10",
+        "Time": "2019/10/12 10:10:11",
         "From": "hikaru isobe",
         "Subject": "testestestestsetestestestsetse",
         "To": "masashi iwata",
