@@ -1,6 +1,9 @@
 {
     "search.exclude": {
-        "**/bower_components": false
+        "**/bower_components": false,
+        "**/node_modules": false
     },
-    "files.watcherExclude": {}
+    "files.watcherExclude": {
+        "**/.git/objects/**": false
+    }
 }

@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, ViewChildren, QueryList, Inject, OnDestro
 import { Subject } from "rxjs";
 import { filter, takeUntil } from "rxjs/operators";
 import { IgxColumnComponent, IgxHierarchicalGridComponent, IgxRowIslandComponent, IgxSnackbarComponent, IgxToastPosition, IgxChipsAreaComponent, IgxLinearProgressBarComponent, IgxTextAlign, IgxOverlayService } from "igniteui-angular";
-import { SINGERS } from "../data";
+import { NEW_TASK_DATA } from "../data";
+import { STAMPED_DATA } from "../stamped_data";
 import { CardSample1Component } from "../../layouts/card/card-sample-1/card-sample-1.component";
 
 @Component({
@@ -13,13 +14,14 @@ import { CardSample1Component } from "../../layouts/card/card-sample-1/card-samp
 
 export class HGridColumnResizingSampleComponent implements OnInit {
     public selection = true;
-    public localdata;
+    public new_task_data;
+    public stamped_data;
     public col: IgxColumnComponent;
     public pWidth: string;
     public nWidth: string;
     public numberOfStampted = 0;
     public checkedItems = 0;
-    public numberOfAllItems = 20;
+    public numberOfAllItems = 10;
     public checkItemsAndNumberOfAllItems = this.checkedItems + ' / ' + this.numberOfAllItems;
     public toastPosition: IgxToastPosition = IgxToastPosition.Middle;
 
@@ -42,13 +44,22 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public positionCenter: IgxTextAlign;
     public positionEnd: IgxTextAlign;
 
+    public bloomberg_chat_icon = "http://localhost:4200/assets/bloomberg_chat.png";
+    public bloomberg_mail_icon = "http://localhost:4200/assets/bloomberg_mail.png";
+    public bloomberg_logo = "http://localhost:4200/assets/bloomberg_logo.png";
+    public pdf_icon = "http://localhost:4200/assets/pdf_icon.png";
+    public pptx_icon = "http://localhost:4200/assets/pptx_icon.png";
+
+
+
 
 
 
 
 
     constructor() {
-        this.localdata = SINGERS;
+        this.new_task_data = NEW_TASK_DATA;
+        this.stamped_data = STAMPED_DATA;
 
     }
 
@@ -77,17 +88,17 @@ export class HGridColumnResizingSampleComponent implements OnInit {
         this.nWidth = event.newWidth;
     }
 
-    public delete(item) {
-        this.deletedItems.push([item, this.localdata.indexOf(item)]);
-        this.localdata.splice(this.localdata.indexOf(item), 1);
-        this.snackbar.show();
-    }
+    // public delete(item) {
+    //     this.deletedItems.push([item, this.localdata.indexOf(item)]);
+    //     this.localdata.splice(this.localdata.indexOf(item), 1);
+    //     this.snackbar.show();
+    // }
 
-    public restore() {
-        const [item, index] = this.deletedItems.pop();
-        this.localdata.splice(index, 0, item);
-        this.snackbar.hide();
-    }
+    // public restore() {
+    //     const [item, index] = this.deletedItems.pop();
+    //     this.localdata.splice(index, 0, item);
+    //     this.snackbar.hide();
+    // }
 
     public stamp(toast) {
         this.numberOfStampted = 0;
