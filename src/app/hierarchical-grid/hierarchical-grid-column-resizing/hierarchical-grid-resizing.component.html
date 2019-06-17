@@ -1,0 +1,95 @@
+<igx-tabs>
+    <igx-tabs-group label=" not checked ">
+
+
+        <div class="check-button">
+            <button igxButton (click)="stamp(toast)" igxButton="raised" igxButtonColor="white">STAMP
+                <igx-icon fontSet="material" igxRipple igxRippleCentered="true">check
+                </igx-icon>
+            </button>
+        </div>
+
+        <div class="progress-bar">
+            <igx-linear-bar type="warning" [textTop]="true" [text]="checkItemsAndNumberOfAllItems" [striped]="true"
+                [max]="numberOfAllItems">
+            </igx-linear-bar>
+        </div>
+
+
+
+        <igx-hierarchical-grid class=" hierarchicalGrid" [data]="localdata" (onColumnResized)="onResize($event)"
+            [autoGenerate]="false" [height]="'600px'" [width]="'100%'" [rowHeight]="'65px'" [rowSelectable]="selection"
+            (onSelection)="handleRowSelection($event)" (onRowSelectionChange)="handleRowSelectionChange($event)"
+            [primaryKey]="'Id'" #hierarchicalGrid>
+            <!-- <igx-column header="check" width="7%">
+                    <ng-template igxCell let-cell="cell" let-val>
+                     
+                        <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+                            <igx-icon color="#ff5252">delete</igx-icon>
+                        </span>
+                    </ng-template>
+                
+                </igx-column> -->
+            <igx-column field="Time" [resizable]="true" [sortable]="true" [width]="'15%'"></igx-column>
+
+            <igx-column field="From" [resizable]="true" [sortable]="true" [width]="'12%'">
+                <ng-template igxCell let-cell="cell">
+
+                    <igx-chip>
+                        <div [innerHTML]="cell.value"></div>
+                    </igx-chip>
+
+                </ng-template>
+            </igx-column>
+
+            <igx-column field="Subject" [resizable]="true" [sortable]="true" [width]="'28%'" [minWidth]="'15%'">
+            </igx-column>
+            <igx-column field="Word" [resizable]="true" [sortable]="true" [width]="'15%'"></igx-column>
+            <igx-column field="To" [resizable]="true" [sortable]="true" [width]="'12%'">
+                <ng-template igxCell let-cell="cell">
+
+                    <igx-chip>
+                        <div [innerHTML]="cell.value"></div>
+                    </igx-chip>
+
+                </ng-template>
+            </igx-column>
+            <igx-column field="Attachment" [resizable]="true" [sortable]="true" [width]="'12%'"></igx-column>
+
+            <igx-row-island [key]="'Detail'" [autoGenerate]="false">
+                <igx-column field="Time" [resizable]="true"></igx-column>
+                <igx-column field="From" [resizable]="true"></igx-column>
+
+                <igx-column field="Content" [resizable]="true" [width]="'60%'">
+                    <ng-template igxCell let-cell="cell">
+
+                        <div [innerHTML]="cell.value"></div>
+
+                    </ng-template>
+                </igx-column>
+                <igx-column field="Attachment" [resizable]="true">
+                    <ng-template igxCell let-cell="cell">
+                        <div class="cell__inner_2">
+                            <p *ngIf="cell.value">
+                                <img [src]="cell.value" class="photo" />
+                            </p>
+                        </div>
+                    </ng-template>
+                </igx-column>
+            </igx-row-island>
+
+
+        </igx-hierarchical-grid>
+
+        <!-- <div>
+            <igx-snackbar #snackbar displayTime="2000">{{numberOfStampted}}stamp completed</igx-snackbar>
+        </div>
+    <button igxButton="raised" (click)="toast.show()">Show notification</button> -->
+
+        <igx-toast #toast message="{{numberOfStampted}} stamp completed" [position]="toastPosition" displayTime="2000">
+        </igx-toast>
+    </igx-tabs-group>
+    <igx-tabs-group label="checked">This is Tab 2 content.</igx-tabs-group>
+
+
+</igx-tabs>
