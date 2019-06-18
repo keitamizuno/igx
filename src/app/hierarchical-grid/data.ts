@@ -94,11 +94,76 @@ export const NEW_TASK_DATA = [
             "From": "miki.takahashi@yrl.co.jp",
             "Content": "<br>みずほ情報総研株式会社<br>水野　様<br>いつもお世話になっております。<br>横河レンタ・リース　高橋と申します。<br>この度は弊社WEBフォームより、<mark>マネロン</mark>のお問い合わせを頂きまして、<br>誠にありがとうございます。",
             "Attachment": ""
+        "Time": "2019/10/10 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
+        }]
+    },
+    {
+        "Id": "3",
+        "Time": "2019/10/12 10:10:11",
+        "From": "hikaru isobe",
+        "Subject": "testestestestsetestestestsetse",
+        "To": "masashi iwata",
+        "Word": "NG word",
+        "Attachment": "●",
+        "Stanp": "buttun",
+        "Detail": [{
+            "From": "The last straw",
+            "Content": "May 09",
+            "Attachment": "Europe, Asia"
+        },
+        {
+            "From": "No foundations",
+            "Content": "Jun 04",
+            "Attachment": "United States, Europe"
+        },
+        {
+            "From": "Crazy eyes",
+            "Content": "Jun 08",
+            "Attachment": "North America"
+        },
+        {
+            "From": "Zero gravity",
+            "Content": "Apr 19",
+            "Attachment": "United States"
+        },
+        {
+            "From": "Battle with myself",
+            "Content": "Mar 08",
+            "Attachment": "North America"
         }]
     },
     {
         "Id": "4",
-        "Sent Time": "2019/10/12 10:10:11",
         "From": "jon.mizuho@mizuho-ir.co.jp",
         "Subject": "商品価格変更のお知らせ",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
@@ -108,14 +173,6 @@ export const NEW_TASK_DATA = [
             "From": "The last straw",
             "Content": "株式会社○○<br>◇◇◇◇様<br>いつもお世話になっております。<br>株式会社△△の○○です。<br>このたびは、弊社の営業時間変更のご連絡でメールをいたしました。<br>弊社の営業時間（平日8:00～19:00）につきまして、<br>以下の店頭窓口の営業時間を次の通り変更いたしますので<br>ご確認のほどよろしくお願いいたします。",
             "Attachment": "Europe, Asia"
-        },
-        {
-            "From": "No foundations",
-            "Content": "株式会社○○<br>◇◇◇◇様<br>いつもお世話になっております。<br>株式会社△△の○○です。<br>このたびは、弊社の営業時間変更のご連絡でメールをいたしました。<br>弊社の営業時間（平日8:00～19:00）につきまして、<br>以下の店頭窓口の営業時間を次の通り変更いたしますので<br>ご確認のほどよろしくお願いいたします。",
-            "Attachment": "United States, Europe"
-        },
-        {
-            "From": "Crazy eyes",
             "Content": "お世話になっております。<br>一般社団法人日本ビジネスメール協会の山田太郎です。<br>長期のお休みをいただくことになりましたので、<br>事前にご連絡をさせていただきました。",
             "Attachment": "North America"
         },
@@ -137,7 +194,7 @@ export const NEW_TASK_DATA = [
         "Subject": "test subject",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
         "Word": "NG word",
-        "Type": "bloomberg_mail",
+        "To": "masashi iwata",
         "Detail": [{
             "From": "The last straw",
             "Content": "May 09",
@@ -200,22 +257,12 @@ export const NEW_TASK_DATA = [
     },
     {
         "Id": "7",
-        "Sent Time": "2019/10/12 10:10:11",
         "From": "taro.mizuho@mizuho.co.jp",
         "Subject": "test subject",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
         "Word": "NG word",
         "Type": "bloomberg_mail",
         "Detail": [{
-            "From": "The last straw",
-            "Content": "May 09",
-            "Attachment": "Europe, Asia"
-        },
-        {
-            "From": "No foundations",
-            "Content": "Jun 04",
-            "Attachment": "United States, Europe"
-        },
         {
             "From": "Crazy eyes",
             "Content": "Jun 08",
@@ -234,22 +281,12 @@ export const NEW_TASK_DATA = [
     },
     {
         "Id": "8",
-        "Sent Time": "2019/10/12 10:10:11",
         "From": "taro.mizuho@mizuho.co.jp",
         "Subject": "test subject",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
         "Word": "NG word",
         "Type": "bloomberg_mail",
         "Detail": [{
-            "From": "The last straw",
-            "Content": "May 09",
-            "Attachment": "Europe, Asia"
-        },
-        {
-            "From": "No foundations",
-            "Content": "Jun 04",
-            "Attachment": "United States, Europe"
-        },
         {
             "From": "Crazy eyes",
             "Content": "Jun 08",
@@ -268,7 +305,6 @@ export const NEW_TASK_DATA = [
     },
     {
         "Id": "9",
-        "Sent Time": "2019/10/12 10:10:11",
         "From": "taro.mizuho@mizuho.co.jp",
         "Subject": "test subject",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
@@ -276,15 +312,6 @@ export const NEW_TASK_DATA = [
         "Attachment": "●",
         "Type": "bloomberg_mail",
         "Detail": [{
-            "From": "The last straw",
-            "Content": "May 09",
-            "Attachment": "Europe, Asia"
-        },
-        {
-            "From": "No foundations",
-            "Content": "Jun 04",
-            "Attachment": "United States, Europe"
-        },
         {
             "From": "Crazy eyes",
             "Content": "Jun 08",
@@ -303,22 +330,12 @@ export const NEW_TASK_DATA = [
     },
     {
         "Id": "10",
-        "Sent Time": "2019/10/12 10:10:11",
         "From": "taro.mizuho@mizuho.co.jp",
         "Subject": "test subject",
         "To": "hanako.mizuho@mizuho-ir.co.jp",
         "Word": "NG word",
         "Type": "bloomberg_chat",
         "Detail": [{
-            "From": "The last straw",
-            "Content": "May 09",
-            "Attachment": "Europe, Asia"
-        },
-        {
-            "From": "No foundations",
-            "Content": "Jun 04",
-            "Attachment": "United States, Europe"
-        },
         {
             "From": "Crazy eyes",
             "Content": "Jun 08",
@@ -1064,7 +1081,11 @@ export const NEW_TASK_DATA = [
     //             "Fromed by": "Peter Taylor"
     //         },
     //         {
+<<<<<<< HEAD
     //             "From": "Sent Time flies",
+=======
+    //             "From": "Time flies",
+>>>>>>> origin/master
     //             "Content": "Jun 03",
     //             "Attachment": "North America",
     //             "Headliner": "NO",
@@ -6125,7 +6146,11 @@ export const NEW_TASK_DATA = [
     // }, {
     //     CustomerID: "HUNGC",
     //     CompanyName: "Hungry Coyote Import Store",
+<<<<<<< HEAD
     //     ContactName: "Yoshi LaSent Timer",
+=======
+    //     ContactName: "Yoshi Latimer",
+>>>>>>> origin/master
     //     ContactTitle: "Sales Representative",
     //     Address: "City Center Plaza 516 Main St.",
     //     City: "Elgin",
@@ -6888,7 +6913,11 @@ export const NEW_TASK_DATA = [
     // }, {
     //     CustomerID: "HUNGC",
     //     CompanyName: "Hungry Coyote Import Store",
+<<<<<<< HEAD
     //     ContactName: "Yoshi LaSent Timer",
+=======
+    //     ContactName: "Yoshi Latimer",
+>>>>>>> origin/master
     //     ContactTitle: "Sales Representative",
     //     Address: "City Center Plaza 516 Main St.",
     //     City: "Elgin",
@@ -7698,7 +7727,11 @@ export const NEW_TASK_DATA = [
     // }, {
     //     CustomerID: "HUNGC",
     //     CompanyName: "Hungry Coyote Import Store",
+<<<<<<< HEAD
     //     ContactName: "Yoshi LaSent Timer",
+=======
+    //     ContactName: "Yoshi Latimer",
+>>>>>>> origin/master
     //     ContactTitle: "Sales Representative",
     //     Address: "City Center Plaza 516 Main St.",
     //     City: "Elgin",
@@ -14962,7 +14995,11 @@ export const NEW_TASK_DATA = [
     // }, {
     //     CustomerID: "HUNGC",
     //     CompanyName: "Hungry Coyote Import Store",
+<<<<<<< HEAD
     //     ContactName: "Yoshi LaSent Timer",
+=======
+    //     ContactName: "Yoshi Latimer",
+>>>>>>> origin/master
     //     ContactTitle: "Sales Representative",
     //     Address: "City Center Plaza 516 Main St.",
     //     City: "Elgin",
@@ -17311,7 +17348,11 @@ export const NEW_TASK_DATA = [
     // }, {
     //     CustomerID: "HUNGC",
     //     CompanyName: "Hungry Coyote Import Store",
+<<<<<<< HEAD
     //     ContactName: "Yoshi LaSent Timer",
+=======
+    //     ContactName: "Yoshi Latimer",
+>>>>>>> origin/master
     //     ContactTitle: "Sales Representative",
     //     Address: "City Center Plaza 516 Main St.",
     //     City: "Elgin",

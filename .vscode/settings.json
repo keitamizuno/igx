@@ -1,9 +1,15 @@
 {
     "search.exclude": {
+<<<<<<< HEAD
         "**/bower_components": false,
         "**/node_modules": false
     },
     "files.watcherExclude": {
         "**/.git/objects/**": false
     }
+=======
+        "**/bower_components": false
+    },
+    "files.watcherExclude": {}
+>>>>>>> origin/master
 }

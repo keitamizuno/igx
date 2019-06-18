@@ -16,12 +16,13 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public selection = true;
     public new_task_data;
     public stamped_data;
+    public localdata;
     public col: IgxColumnComponent;
     public pWidth: string;
     public nWidth: string;
     public numberOfStampted = 0;
     public checkedItems = 0;
-    public numberOfAllItems = 10;
+    public numberOfAllItems = 20;
     public checkItemsAndNumberOfAllItems = this.checkedItems + ' / ' + this.numberOfAllItems;
     public toastPosition: IgxToastPosition = IgxToastPosition.Middle;
 
