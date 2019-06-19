@@ -67,10 +67,16 @@
                 <ng-template igxCell let-cell="cell">
 
                     <span *ngIf="cell.value == 'bloomberg_chat'">
-                        <img [src]="bloomberg_logo" class="logo" /><img [src]="bloomberg_chat_icon" class="icon" />
+                        <img [src]="bloomberg_logo" class="bloomberg_logo" /><img [src]="bloomberg_chat_icon"
+                            class="icon" />
                     </span>
                     <span *ngIf="cell.value == 'bloomberg_mail'">
-                        <img [src]="bloomberg_logo" class="logo" /><img [src]="bloomberg_mail_icon" class="icon" />
+                        <img [src]="bloomberg_logo" class="bloomberg_logo" /><img [src]="bloomberg_mail_icon"
+                            class="icon" />
+                    </span>
+
+                    <span *ngIf="cell.value == 'symphony'">
+                        <img [src]="symphony_logo" class="symphony_logo" />
                     </span>
 
                     <!-- <p *ngIf="cell.value == 'bloomberg_chat'">
@@ -117,52 +123,53 @@
         <igx-toast #toast message="{{numberOfStampted}} stamp completed" [position]="toastPosition" displayTime="2000">
         </igx-toast>
     </igx-tabs-group>
-    <br>
+    <igx-tabs-group label="Done list">
+        <br>
 
 
-    <igx-hierarchical-grid class=" hierarchicalGrid" [data]="stamped_data" (onColumnResized)="onResize($event)"
-        [autoGenerate]="false" [height]="'600px'" [width]="'100%'" [primaryKey]="'Id'" [allowFiltering]='true'
-        #hierarchicalGrid>
+        <igx-hierarchical-grid class=" hierarchicalGrid" [data]="stamped_data" (onColumnResized)="onResize($event)"
+            [autoGenerate]="false" [height]="'600px'" [width]="'100%'" [primaryKey]="'Id'" [allowFiltering]='true'
+            #hierarchicalGrid>
 
-        <igx-column field="Stamped Time" [resizable]="true" [sortable]="true" [width]="'170px'" [dataType]="'date'">
-            <ng-template igxCell let-cell="cell">
-                <div [innerHTML]="cell.value"></div>
-            </ng-template>
-        </igx-column>
+            <igx-column field="Stamped Time" [resizable]="true" [sortable]="true" [width]="'170px'" [dataType]="'data'">
+                <ng-template igxCell let-cell="cell">
+                    <div [innerHTML]="cell.value"></div>
+                </ng-template>
+            </igx-column>
 
-        <igx-column field="Sent Time" [resizable]="true" [sortable]="true" [width]="'170px'">
-            <ng-template igxCell let-cell="cell">
-                <div [innerHTML]="cell.value"></div>
-            </ng-template>
-        </igx-column>
+            <igx-column field="Sent Time" [resizable]="true" [sortable]="true" [width]="'170px'">
+                <ng-template igxCell let-cell="cell">
+                    <div [innerHTML]="cell.value"></div>
+                </ng-template>
+            </igx-column>
 
-        <igx-column field="From" [resizable]="true" [sortable]="true">
-            <!-- <ng-template igxCell let-cell="cell">
+            <igx-column field="From" [resizable]="true" [sortable]="true">
+                <!-- <ng-template igxCell let-cell="cell">
                 <igx-chip>
                 <div [innerHTML]="cell.value"></div>
                 </igx-chip>
             </ng-template> -->
-        </igx-column>
+            </igx-column>
 
-        <igx-column field="Subject" [resizable]="true" [sortable]="true" [width]="'30%'">
-            <ng-template igxCell let-cell="cell">
-                <div class="igx-typography__subtitle-2">
+            <igx-column field="Subject" [resizable]="true" [sortable]="true" [width]="'30%'">
+                <ng-template igxCell let-cell="cell">
+                    <div class="igx-typography__subtitle-2">
 
-                    <div [innerHTML]="cell.value"></div>
-                </div>
-            </ng-template>
-        </igx-column>
+                        <div [innerHTML]="cell.value"></div>
+                    </div>
+                </ng-template>
+            </igx-column>
 
-        <igx-column field="Word" [resizable]="true" [sortable]="true" [width]="'10%'">
-            <ng-template igxCell let-cell="cell">
-                <div class="igx-typography__subtitle-2">
+            <igx-column field="Word" [resizable]="true" [sortable]="true" [width]="'10%'">
+                <ng-template igxCell let-cell="cell">
+                    <div class="igx-typography__subtitle-2">
 
-                    <div [innerHTML]="cell.value"></div>
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column field="To" [resizable]="true" [sortable]="true" [minWidth]="'170px'">
-            <!-- <ng-template igxCell let-cell="cell">
+                        <div [innerHTML]="cell.value"></div>
+                    </div>
+                </ng-template>
+            </igx-column>
+            <igx-column field="To" [resizable]="true" [sortable]="true" [minWidth]="'170px'">
+                <!-- <ng-template igxCell let-cell="cell">
                 <igx-chip>
                 <div [innerHTML]="cell.value"></div>
                 </igx-chip>
@@ -170,51 +177,59 @@
                     <div class="to_cell"> +2</div>
                 </div>
             </ng-template> -->
-        </igx-column>
-        <igx-column field="Type" [resizable]="true" [sortable]="true" [width]="'150px'" [filterable]='false'>
-            <ng-template igxCell let-cell="cell">
+            </igx-column>
+            <igx-column field="Type" [resizable]="true" [sortable]="true" [width]="'150px'" [filterable]='false'>
+                <ng-template igxCell let-cell="cell">
 
-                <span *ngIf="cell.value == 'bloomberg_chat'">
-                    <img [src]="bloomberg_logo" class="logo" /><img [src]="bloomberg_chat_icon" class="icon" />
-                </span>
-                <span *ngIf="cell.value == 'bloomberg_mail'">
-                    <img [src]="bloomberg_logo" class="logo" /><img [src]="bloomberg_mail_icon" class="icon" />
-                </span>
+                    <span *ngIf="cell.value == 'bloomberg_chat'">
+                        <img [src]="bloomberg_logo" class="bloomberg_logo" /><img [src]="bloomberg_chat_icon"
+                            class="icon" />
+                    </span>
+                    <span *ngIf="cell.value == 'bloomberg_mail'">
+                        <img [src]="bloomberg_logo" class="bloomberg_logo" /><img [src]="bloomberg_mail_icon"
+                            class="icon" />
+                    </span>
+                    <span *ngIf="cell.value == 'symphony'">
+                        <img [src]="symphony_logo" class="logo" />
+                    </span>
 
-                <!-- <p *ngIf="cell.value == 'bloomberg_chat'">
+                    <!-- <p *ngIf="cell.value == 'bloomberg_chat'">
                     <img [src]="http://localhost:4200/assets/bloomberg_chat.svg" />
                 </p> -->
 
-            </ng-template>
-        </igx-column>
-
-        <igx-row-island [key]="'Detail'" [autoGenerate]="false">
-            <igx-column field="Sent Time" [resizable]="true" [width]="'170px'"></igx-column>
-            <igx-column field="From" [resizable]="true" [width]="'250px'"></igx-column>
-
-            <igx-column field="Content" [resizable]="true">
-                <ng-template igxCell let-cell="cell">
-                    <div [innerHTML]="cell.value"></div>
                 </ng-template>
             </igx-column>
 
-            <igx-column field="Attachment" [resizable]="true" [width]="'200px'">
-                <ng-template igxCell let-cell="cell">
-                    <span *ngIf="cell.value == 'pdf'">
-                        <a href="assets/NGワード.pdf" target="_blank">
-                            <img [src]="pdf_icon" class="photo" />NGワード.pdf
-                        </a>
-                    </span>
-                    <span *ngIf="cell.value == 'pptx'">
-                        <a href="assets/workshop.pptx">
-                            <img [src]="pptx_icon" class="photo" />workshop.pptx
-                        </a>
-                    </span>
-                </ng-template>
-            </igx-column>
-        </igx-row-island>
+            <igx-row-island [key]="'Detail'" [autoGenerate]="false">
+                <igx-column field="Sent Time" [resizable]="true" [width]="'170px'"></igx-column>
+                <igx-column field="From" [resizable]="true" [width]="'250px'"></igx-column>
+
+                <igx-column field="Content" [resizable]="true">
+                    <ng-template igxCell let-cell="cell">
+                        <div [innerHTML]="cell.value"></div>
+                    </ng-template>
+                </igx-column>
+
+                <igx-column field="Attachment" [resizable]="true" [width]="'200px'">
+                    <ng-template igxCell let-cell="cell">
+                        <span *ngIf="cell.value == 'pdf'">
+                            <a href="assets/NGワード.pdf" target="_blank">
+                                <img [src]="pdf_icon" class="photo" />NGワード.pdf
+                            </a>
+                        </span>
+                        <span *ngIf="cell.value == 'pptx'">
+                            <a href="assets/workshop.pptx">
+                                <img [src]="pptx_icon" class="photo" />workshop.pptx
+                            </a>
+                        </span>
+                    </ng-template>
+                </igx-column>
+            </igx-row-island>
 
 
-    </igx-hierarchical-grid>
+        </igx-hierarchical-grid>
 
     </igx-tabs-group>
+
+
+</igx-tabs>

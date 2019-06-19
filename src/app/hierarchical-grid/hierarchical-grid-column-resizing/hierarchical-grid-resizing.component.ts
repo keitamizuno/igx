@@ -22,7 +22,7 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public nWidth: string;
     public numberOfStampted = 0;
     public checkedItems = 0;
-    public numberOfAllItems = 20;
+    public numberOfAllItems = 10;
     public checkItemsAndNumberOfAllItems = this.checkedItems + ' / ' + this.numberOfAllItems;
     public toastPosition: IgxToastPosition = IgxToastPosition.Middle;
 
@@ -48,6 +48,7 @@ export class HGridColumnResizingSampleComponent implements OnInit {
     public bloomberg_chat_icon = "http://localhost:4200/assets/bloomberg_chat.png";
     public bloomberg_mail_icon = "http://localhost:4200/assets/bloomberg_mail.png";
     public bloomberg_logo = "http://localhost:4200/assets/bloomberg_logo.png";
+    public symphony_logo = "http://localhost:4200/assets/symphony_logo.png";
     public pdf_icon = "http://localhost:4200/assets/pdf_icon.png";
     public pptx_icon = "http://localhost:4200/assets/pptx_icon.png";
 
