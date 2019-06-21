@@ -35,7 +35,7 @@ export const NEW_TASK_DATA = [
         {
             "Sent Time": "2019/09/21 17:21:11",
             "From": "keita.mizuno@mizuho-ir.co.jp",
-            "Content": '因みに添付したファイルを見ると<mark>賄賂</mark>という単語はNGワードに入っているみたいですが、どうでしょうか。',
+            "Content": '添付したファイルに<mark>賄賂</mark>の受け取り方法が記載されています。',
             "Attachment": "pdf"
         }
         ]
@@ -51,6 +51,7 @@ export const NEW_TASK_DATA = [
         "Type": "bloomberg_chat",
         "Stanp": "buttun",
         "Detail": [{
+            "Sent Time": "2019/09/25 21:31:31",
             "From": "The last straw",
             "Content": "Don’t miss out on these upcoming webinars with <mark>Elasticsearch</mark> experts Elastic Common Schema: How to migrate your data",
             "Attachment": "pptx"
@@ -61,7 +62,7 @@ export const NEW_TASK_DATA = [
         "Id": "3",
         "Sent Time": "2019/09/28 14:22:43",
         "From": "miki.takahashi@yrl.co.jp",
-        "Subject": "Re: お問い合わせありがとうございます【横河レンタ・リース】",
+        "Subject": "Re: お問い合わせありがとうございます",
         "To": "keita.mizuno@mizuho.co.jp",
         "Word": "マネロン",
         "Type": "bloomberg_mail",

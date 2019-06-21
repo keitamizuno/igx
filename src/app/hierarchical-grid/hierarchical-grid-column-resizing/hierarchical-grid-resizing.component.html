@@ -99,8 +99,8 @@
                 <igx-column field="Attachment" [resizable]="true" [width]="'200px'">
                     <ng-template igxCell let-cell="cell">
                         <span *ngIf="cell.value == 'pdf'">
-                            <a href="assets/NGワード.pdf" target="_blank">
-                                <img [src]="pdf_icon" class="photo" />NGワード.pdf
+                            <a href="assets/symphony.pdf" target="_blank">
+                                <img [src]="pdf_icon" class="photo" />test.pdf
                             </a>
                         </span>
                         <span *ngIf="cell.value == 'pptx'">
@@ -190,7 +190,7 @@
                             class="icon" />
                     </span>
                     <span *ngIf="cell.value == 'symphony'">
-                        <img [src]="symphony_logo" class="logo" />
+                        <img [src]="symphony_logo" class="symphony_logo" />
                     </span>
 
                     <!-- <p *ngIf="cell.value == 'bloomberg_chat'">

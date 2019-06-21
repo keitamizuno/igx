@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxHierarchicalGridModule } from "igniteui-angular";
+import { HttpClientModule } from '@angular/common/http';
 import { HGridColumnResizingSampleComponent } from "./hierarchical-grid/hierarchical-grid-column-resizing/hierarchical-grid-resizing.component";
 import {
   IgxAvatarModule,
@@ -28,6 +29,7 @@ import {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     IgxHierarchicalGridModule,
     IgxAvatarModule,
